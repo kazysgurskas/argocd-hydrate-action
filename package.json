@@ -1,0 +1,25 @@
+{
+  "name": "setup-argocd-hydrate",
+  "version": "1.0.0",
+  "description": "GitHub Action to set up ArgoCD Hydrate",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "ncc build src/index.js -o dist"
+  },
+  "keywords": [
+    "github",
+    "actions",
+    "argocd",
+    "setup"
+  ],
+  "author": "Kazys Gurskas",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1",
+    "@actions/tool-cache": "^2.0.1"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.36.1"
+  }
+}

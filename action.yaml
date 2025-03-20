@@ -1,0 +1,28 @@
+name: 'Setup ArgoCD Hydrate'
+description: 'Sets up argocd-hydrate binary from GitHub Packages'
+author: 'Kazys Gurskas'
+branding:
+  icon: 'layers'
+  color: 'blue'
+
+inputs:
+  version:
+    description: 'Version of ArgoCD Hydrate to install'
+    required: true
+    default: 'latest'
+  arch:
+    description: 'Architecture to install (amd64, arm64)'
+    required: false
+    default: ''
+  os:
+    description: 'Operating system to install (linux, windows, darwin)'
+    required: false
+    default: ''
+  token:
+    description: 'GitHub token for API requests'
+    required: false
+    default: ''
+
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
